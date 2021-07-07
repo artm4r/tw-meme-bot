@@ -1,6 +1,11 @@
 const tmi = require('tmi.js');
-require('dotenv').config();
-const axios = require('axios');
+const http = require('http');
+//require('dotenv').config();
+//const axios = require('axios');
+
+http.createServer(function(request, response){
+    response.end("Hello world!");
+}).listen(process.env.PORT || 5000);
 
 let currentToken = '';
 
